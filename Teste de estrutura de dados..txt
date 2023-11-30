@@ -1,0 +1,16 @@
+PRIMEIRA QUESTAO: Nao consegui solucionar.
+
+SEGUNDA QUESTAO: Nao consegui solucionar.
+
+TERCEIRA QUESTAO:
+Na declaracao das variaveis faltou um ponto e virgula no final;
+Faltou fechar a chave do FOR;
+A variavel I nao foi declarada;
+faltou o 0 e o ponto e virgula após o return.
+
+QUARTA QUESTAO: Nao consegui solucionar. 
+
+QUINTA QUESTAO:
+2
+200
+Fim do laco!
