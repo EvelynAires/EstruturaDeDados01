@@ -49,7 +49,7 @@ void imprime(Ingresso * i, int a){
 //altera_preco(Ingresso* i, float valor);
 void altera_preco (Ingresso *i, float valor){
     i->preco = valor;
-    printf("O preco agora é: %.2f \n", i->preco);
+    printf("O preco agora e: %.2f \n", i->preco);
 }
 
 //d) Escreva uma função que receba, como parâmetros, um vetor de ingressos e o tamanho do vetor e
@@ -80,7 +80,7 @@ int main(){
     int op;
     float valor;
 
-    printf("Quantos ingressos vão ser cadastrados?");
+    printf("Quantos ingressos vao ser cadastrados?");
     scanf("%d", &quantidade);
 
     Ingresso vetor_i[quantidade];
@@ -105,7 +105,7 @@ int main(){
         scanf("%d", &op);
 
         if (op > quantidade|| op< 0){
-            printf("ERRO! Ingresso não encontrado!");
+            printf("ERRO! Ingresso nao encontrado!");
             return 0;
         }
 
@@ -118,7 +118,7 @@ int main(){
         printf("Encerrando o programa..");
         break;
     default:
-        printf("Opçao inválida!");
+        printf("Opçao invalida!");
         break;
     }
 
