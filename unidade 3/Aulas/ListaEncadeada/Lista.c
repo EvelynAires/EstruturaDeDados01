@@ -30,3 +30,22 @@ void lista_imprime(Lista * lista){
         printf("informacao = %d\n", contador->informacao);
     }
 }
+
+int lista_vazia(Lista * lista){
+    if(lista == NULL){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+Lista* lista_busca (Lista* lista, int v);{
+
+    lista *p;
+    for (p=lista; p!=NULL; p=p->prox){
+        if (p->informacao == v)
+        return p;
+        return NULL;
+    }
+}
