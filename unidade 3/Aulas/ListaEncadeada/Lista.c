@@ -42,8 +42,8 @@ int lista_vazia(Lista * lista){
 
 Lista* lista_busca (Lista* lista, int v);{
 
-    lista *p;
-    for (p=lista; p!=NULL; p=p->prox){
+    lista_busca *p;
+    for (p=lista_busca; p!=NULL; p=p->prox){
         if (p->informacao == v)
         return p;
         return NULL;
