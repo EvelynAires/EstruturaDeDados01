@@ -38,18 +38,18 @@ void deposita(struct ContaBancaria *conta, float valor) {
 int saca(struct ContaBancaria *conta, float valor) {
     if (conta->saldo >= valor) {
         conta->saldo -= valor;
-        return 1; // Saque realizado com sucesso
+        return 1;
     } else {
-        return 0; // Saldo insuficiente para o saque
+        return 0; 
     }
 }
 
 int transfere(struct ContaBancaria *origem, struct ContaBancaria *destino, float valor) {
     if (saca(origem, valor)) { 
         deposita(destino, valor); 
-        return 1; // Transferência realizada com sucesso
+        return 1;
     } else {
-        return 0; // Saldo insuficiente na conta de origem
+        return 0;
     }
 }
 
