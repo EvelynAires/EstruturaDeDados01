@@ -6,7 +6,7 @@
 typedef struct Aluno {
     char nome[100];
     int matricula;
-    Disciplina* disciplinas[10];
+    Disciplina* disciplina[8];
     int num_disciplinas;
 } Aluno;
 

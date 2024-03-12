@@ -6,7 +6,7 @@
 Disciplina* cria_disciplina(char nome[], int codigo) {
     Disciplina* disciplina = (Disciplina*)malloc(sizeof(Disciplina));
     if (disciplina == NULL) {
-        printf("Erro ao alocar memória para a disciplina.\n");
+        printf("Erro ao alocar a memória para a disciplina.\n");
         exit(1);
     }
     strcpy(disciplina->nome, nome);
