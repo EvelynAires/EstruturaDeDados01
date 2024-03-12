@@ -11,7 +11,7 @@ struct aluno {
 }Aluno;
 
 void adicionar() {
-    struct aluno Aluno; // Corrigido para usar o struct aluno
+    struct aluno Aluno; 
 
     FILE *entrada = fopen("aluno.txt", "a");
 

@@ -4,7 +4,7 @@
 
 int main() {
     int n;
-    printf("Quantos ingressos deseja cadastrar? ");
+    printf("Informe quantos ingressos deseja cadastrar? ");
     scanf("%d", &n);
 
     Ingresso* ingressos = (Ingresso*)malloc(n * sizeof(Ingresso));

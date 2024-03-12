@@ -2,20 +2,20 @@
 #include <stdio.h>
 
 void preenche(Ingresso* i) {
-    printf("Digite o preço do ingresso: ");
+    printf("Informe o preco do ingresso: ");
     scanf("%f", &i->preco);
 
-    printf("Digite o local do evento: ");
+    printf("Diga o local que ira ocorrer o evento: ");
     scanf("%s", i->local);
 
-    printf("Digite a atração do evento: ");
+    printf("Digite a atracao do evento: ");
     scanf("%s", i->atracao);
 }
 
 void imprime(Ingresso* i) {
     printf("Preço: %.2f\n", i->preco);
     printf("Local: %s\n", i->local);
-    printf("Atração: %s\n", i->atracao);
+    printf("Atracao: %s\n", i->atracao);
 }
 
 void altera_preco(Ingresso* i, float valor) {
@@ -35,8 +35,8 @@ void imprime_menor_maior_preco(int n, Ingresso* vet) {
         }
     }
 
-    printf("Evento de ingresso mais barato:\n");
+    printf("Evento do ingresso mais barato:\n");
     imprime(&vet[menor_indice]);
-    printf("\nEvento de ingresso mais caro:\n");
+    printf("\nEvento do ingresso mais caro:\n");
     imprime(&vet[maior_indice]);
 }
