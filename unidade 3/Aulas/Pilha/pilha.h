@@ -15,3 +15,5 @@ int pilha_vazia (Pilha* p);
 
 /*Liberar a estrutura da pilha*/
 void pilha_libera (Pilha* p);
+
+void pilha_imprime (Pilha* p);

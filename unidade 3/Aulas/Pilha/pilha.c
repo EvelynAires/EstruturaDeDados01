@@ -7,7 +7,7 @@
 struct pilha{
   int n;
   float vet[N];
-}
+};
 
 Pilha* pilha_cria (void){
     Pilha* p = (Pilha*) malloc(sizeof(Pilha));
@@ -47,5 +47,6 @@ void pilha_libera (Pilha* p){
 }
 
 void pilha_imprime (Pilha* p){
-
+    int index;
+    for(index= p-> n-1; index >= 0; index--)
 }
