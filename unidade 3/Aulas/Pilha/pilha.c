@@ -1,52 +1,54 @@
 #include "pilha.h"
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #define N 50
 
-struct pilha{
-  int n;
-  float vet[N];
+struct pilha {
+    int n;
+    float vet[N];
 };
 
-Pilha* pilha_cria (void){
-    Pilha* p = (Pilha*) malloc(sizeof(Pilha));
-    p->n = 0;
-    return p;
-}
-
-void pilha_push (Pilha* p, float v){
-    if (p->n == N) {
-        printf("Capacidade da pilha estourou!\n");
+Pilha * pilha_cria(void) {
+    Pilha * pilha = (Pilha *) malloc(sizeof(Pilha));
+    if(pilha == NULL) {
         exit(1);
     }
-
-    p->vet[p->n] = v;
-    p->n++;
+    pilha->n = 0;
+    return pilha;
 }
 
-int pilha_vazia(Pilha* p){
-    return (p->n == 0);
-}
-
-
-float pilha_pop (Pilha* p){
-    float v;
-    if (pilha_vazia(p)){
-        printf("Pilha vazia.\n");
+void pilha_push(Pilha * pilha, float valor) {
+    if(pilha->n == N) {
+        printf("Capaciade da pilha estourou!\n");
         exit(1);
     }
-
-    v = p->vet[p->n--1];
-    p->n-- ;
-    return v;
+    pilha->vet[pilha->n] = valor;
+    pilha->n++;
 }
 
-void pilha_libera (Pilha* p){
-    free(p);
+int pilha_vazia(Pilha * pilha) {
+    return (pilha->n == 0);
 }
 
-void pilha_imprime (Pilha* p){
+float pilha_pop(Pilha * pilha) {
+    float valor;
+    if(pilha_vazia(pilha)) {
+        printf("Pilha vazia!\n");
+        exit(1);
+    }
+    valor = pilha->vet[pilha->n-1];
+    pilha->n--;
+    return valor;
+}
+
+void pilha_libera(Pilha * pilha) {
+    free(pilha);
+}
+
+void pilha_imprime(Pilha * pilha) {
     int index;
-    for(index= p-> n-1; index >= 0; index--)
+    for(index = pilha->n-1; index >= 0; index--) {
+        printf("%.2f\n", pilha->vet[index]);
+    }
 }
