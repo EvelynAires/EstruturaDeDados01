@@ -2,8 +2,6 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-#define N 50
-
 struct pilha{
   int n;
   float* vet;
@@ -21,4 +19,12 @@ Pilha* pilha_cria (void){
         exit(1);
     }
     return stack;
+}
+
+void pilha_push(Pilha * stack, float v) {
+    if (stack->tamanho == stack->capacidade) {
+        printf("Capaciade da pilha estourou!\n");
+        exit(1);
+    }
+    
 }
